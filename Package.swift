@@ -136,7 +136,7 @@ let package = Package(
 
         // SwiftAISDK - Main AI SDK (matches @ai-sdk/ai)
         // GenerateText, Registry, Middleware, Prompts, Tools, Telemetry
-        .target(name: "SwiftAISDK", dependencies: ["AISDKProvider", "AISDKProviderUtils", "AISDKJSONSchema", "EventSourceParser", "GatewayProvider"]),
+        .target(name: "SwiftAISDK", dependencies: ["AISDKProvider", "AISDKProviderUtils", "AISDKJSONSchema", "EventSourceParser", "GatewayProvider"], resources: [.process("PrivacyInfo.xcprivacy")]),
 	        .testTarget(
                 name: "SwiftAISDKTests",
                 dependencies: ["SwiftAISDK", "OpenAIProvider", "OpenAICompatibleProvider", "CohereProvider", "AmazonBedrockProvider"],
